@@ -1,0 +1,6 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--mat-toolbar-standard-height);
+  row-gap: 15dvh;
+}

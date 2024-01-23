@@ -1,0 +1,31 @@
+.section {
+  padding: 0 5dvw 0 5dvw;
+  padding-top: calc(var(--mat-toolbar-standard-height));
+  // padding-bottom: calc(var(--mat-toolbar-standard-height) + 5dvh);
+  // height: calc(95dvh - var(--mat-toolbar-standard-height));
+  color: white;
+}
+
+.section > h1 {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.section {
+  opacity: 0; /* Set the initial opacity to 0 (invisible) */
+  animation: none;
+}
+
+.is-in-view {
+  opacity: 1;
+  animation: my-animation 1s ease-in-out;
+}
+
+@keyframes my-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

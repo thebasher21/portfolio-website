@@ -1,0 +1,8 @@
+<div [attr.id]="name" class="section" [class.is-in-view]="isInView">
+  <h1>{{ name }}</h1>
+  <div class="projects-list">
+    @for (project of projects; track $index) {
+    <app-project-card></app-project-card>
+    }
+  </div>
+</div>

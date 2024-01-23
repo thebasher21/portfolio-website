@@ -1,0 +1,72 @@
+.section {
+  padding: 0 5dvw 0 5dvw;
+  padding-top: calc(var(--mat-toolbar-standard-height));
+  // padding-bottom: calc(var(--mat-toolbar-standard-height) + 5dvh);
+  // max-height: calc(95dvh - var(--mat-toolbar-standard-height));
+  color: white;
+}
+
+.section > h1 {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-height: 100%;
+  justify-content: flex-start;
+  row-gap: 5dvh;
+}
+
+.details {
+  // min-width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.profile-image-container {
+  min-width: 40%;
+  max-width: 40%;
+  border-radius: 10px;
+}
+
+// .profile-image-container > img {
+//   animation: fadeIn 2s forwards;
+// }
+
+.image {
+  min-width: 40%;
+  max-width: 40%;
+  border-radius: 10px;
+  max-height: 100%;
+  // opacity: 0; /* Set the initial opacity to 0 (invisible) */
+  // animation: none;
+}
+
+.section {
+  opacity: 0; /* Set the initial opacity to 0 (invisible) */
+  animation: none;
+}
+
+.is-in-view {
+  opacity: 1;
+  animation: my-animation 1s ease-in-out;
+}
+
+@keyframes my-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.profile-text {
+  width: 40%;
+  font-size: large;
+}

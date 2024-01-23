@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.navbar-list {
+  display: flex;
+  column-gap: 4dvw;
+}
+
+.navbar-list-item {
+  min-width: max-content;
+  font-size: large;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}

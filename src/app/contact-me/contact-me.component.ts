@@ -28,7 +28,7 @@ export class ContactMeComponent implements OnInit {
   contactDetails: Array<ContactDetail> = [
     {
       detailType: 'E-mail',
-      icon: '../../assets/email.svg',
+      icon: '../../assets/email-svgrepo-com.svg',
       detailValue: 'mailto:vihaan1303@gmail.com?subject=Reaching out for',
     },
     {

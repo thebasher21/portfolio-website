@@ -1,0 +1,60 @@
+.skill {
+  scale: 1;
+  animation: skill-no-hover 100ms ease-in-out;
+  background-color: #222222;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 0.5dvw;
+  padding: 1dvh 1dvw 1dvh 1dvw;
+}
+
+.skill > img {
+  height: 20px;
+  width: 20px;
+  // max-height: 20px;
+  // max-width: 20px;
+  border-radius: 5px;
+}
+
+.skill > span {
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: normal;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.skill:hover > span {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.skill:hover {
+  animation: skill-hover 300ms ease-in-out;
+  scale: 1.3;
+  // font-weight: bold;
+}
+
+@keyframes skill-hover {
+  from {
+    scale: 1;
+    // font-weight: 400;
+  }
+  to {
+    scale: 1.3;
+    // font-weight: bold;
+  }
+}
+
+@keyframes skill-no-hover {
+  from {
+    scale: 1.3;
+    // font-weight: bold;
+  }
+  to {
+    scale: 1;
+    // font-weight: 400;
+  }
+}

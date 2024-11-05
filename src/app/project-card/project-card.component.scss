@@ -1,0 +1,42 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 30px;
+  background-color: #111111;
+  padding: 3dvb;
+  row-gap: 2dvb;
+}
+
+.project-card-header {
+  border-radius: 30px;
+}
+
+.project-card-body {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  row-gap: 2dvb;
+}
+
+.project-card-footer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  gap: 2dvb;
+}
+
+.project-card-tech-stack {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 2dvb;
+  column-gap: 3dvb;
+}
+
+.project-screenshot {
+  width: 100%;
+}

@@ -1,17 +1,8 @@
 <div [attr.id]="name" class="section" [class.is-in-view]="isInView">
   <h1>{{ name }}</h1>
   <div class="skill-list">
-    <!-- <mat-chip-set aria-label="Skill List" class="skills"> -->
     @for (skill of skills; track $index) {
-    <div class="skill">
-      <img
-        [src]="skill.imageSource"
-        alt="Icon of {{ skill.skillName }}"
-        [class]="skill.skillName"
-      />
-      {{ skill.skillName }}
-    </div>
+    <app-skill-chip [skillDetails]="skill"></app-skill-chip>
     }
-    <!-- </mat-chip-set> -->
   </div>
 </div>

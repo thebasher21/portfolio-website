@@ -1,1 +1,22 @@
-<p>project-card works!</p>
+<div class="project-card">
+  <div class="project-card-header">
+    <h3>{{ projectDetails.projectName }}</h3>
+  </div>
+  <div class="project-card-body">
+    <img
+      src="{{ projectDetails.screenshot }}"
+      alt="Project Screenshot"
+      class="project-screenshot"
+    />
+    <span>{{ projectDetails.projectDescription }}</span>
+  </div>
+  <div class="project-card-footer">
+    <a [href]="projectDetails.projectLink" target="_blank">Project Link</a>
+    <a [href]="projectDetails.repoLink" target="_blank">Repo Link</a>
+    <div class="project-card-tech-stack">
+      @for (skill of projectDetails.techStack; track $index) {
+      <app-skill-chip [skillDetails]="skill"></app-skill-chip>
+      }
+    </div>
+  </div>
+</div>

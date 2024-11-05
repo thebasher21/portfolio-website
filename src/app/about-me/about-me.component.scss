@@ -54,7 +54,7 @@
 
 .is-in-view {
   opacity: 1;
-  animation: my-animation 1s ease-in-out;
+  animation: my-animation 0.5s ease-in-out;
 }
 
 @keyframes my-animation {
@@ -67,6 +67,10 @@
 }
 
 .profile-text {
-  width: 40%;
+  width: 100%;
   font-size: large;
+}
+
+.profile-description {
+  width: 40%;
 }

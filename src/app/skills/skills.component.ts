@@ -1,14 +1,9 @@
-import {
-  Component,
-  ElementRef,
-  OnInit,
-  ViewChild,
-  inject,
-} from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
 
 import { MatChipsModule } from '@angular/material/chips';
+import { SkillChipComponent } from '../skill-chip/skill-chip.component';
 
-type Skill = {
+export type Skill = {
   skillName: string;
   imageSource: string;
 };
@@ -16,7 +11,7 @@ type Skill = {
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [MatChipsModule],
+  imports: [MatChipsModule, SkillChipComponent],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
@@ -25,6 +20,7 @@ export class SkillsComponent implements OnInit {
   skills: Array<Skill> = [
     { skillName: 'ReactJS', imageSource: '../../assets/reactjs-icon.svg' },
     { skillName: 'React Native', imageSource: '../../assets/react-native.svg' },
+    { skillName: 'Redux', imageSource: '../../assets/redux-icon.svg' },
     { skillName: 'Angular', imageSource: '../../favicon.ico' },
     { skillName: 'Python', imageSource: '../../assets/python-icon.svg' },
     {
@@ -55,11 +51,13 @@ export class SkillsComponent implements OnInit {
       skillName: 'NextJS',
       imageSource: '../../assets/nextjs-icon.svg',
     },
+    { skillName: 'HTML', imageSource: '../../assets/html-icon.svg' },
+    { skillName: 'CSS', imageSource: '../../assets/css-icon.svg' },
   ];
   @ViewChild('Skills') sectionRef: ElementRef = inject(ElementRef);
   isInView = false;
   ngOnInit(): void {
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
       this.isInView = entries[0].isIntersecting;
     });
     observer.observe(this.sectionRef.nativeElement);
